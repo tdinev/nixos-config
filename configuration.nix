@@ -93,6 +93,8 @@
     emacs
     git
     git-credential-oauth
+    helix
+    helix-gpt
     httpie
     jdk21
     jetbrains.idea-community
