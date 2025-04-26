@@ -109,6 +109,7 @@
     python313
     rustup
     vscode
+    wezterm
     wget
     tree
     vim
