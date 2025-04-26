@@ -93,6 +93,7 @@
     clojure
     curl
     emacs
+    gcc14
     git
     git-credential-oauth
     helix
@@ -100,12 +101,12 @@
     httpie
     jdk21
     jetbrains.idea-community
+    jetbrains.rust-rover
     kotlin
     lolcat
     neofetch
     nodejs_23
     python313
-    rustc
     rustup
     vscode
     wget
