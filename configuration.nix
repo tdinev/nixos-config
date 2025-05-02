@@ -103,6 +103,7 @@
   emacs
   fastfetch
   git
+  git-credential-oauth
   helix
   lazygit
   rustup
