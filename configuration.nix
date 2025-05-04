@@ -125,6 +125,7 @@
   tmux
   tree
   wezterm
+  zellij
   zsh
   ];
 
