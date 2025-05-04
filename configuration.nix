@@ -100,17 +100,31 @@
   bat
   clojure
   clojure-lsp
+  curl
+  docker
   emacs
   fastfetch
+  figlet
+  fzf
+  jdk21_headless
+  jujutsu
+  ghostty
   git
   git-credential-oauth
   helix
+  httpie
   lazygit
+  neovim
+  nodejs_23
+  nushell
+  ripgrep
   rustup
+  starship
   telegram-desktop
   tmux
   tree
   wezterm
+  zsh
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
