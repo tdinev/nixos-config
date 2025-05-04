@@ -121,6 +121,7 @@
   nodejs_23
   nushell
   ripgrep
+  rustlings
   rustup
   starship
   telegram-desktop
