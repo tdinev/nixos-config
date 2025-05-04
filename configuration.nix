@@ -76,6 +76,7 @@
     packages = with pkgs; [
     #  thunderbird
     ];
+    shell = pkgs.nushell;
   };
 
   # Enable automatic login for the user.
@@ -88,6 +89,8 @@
 
   # Install firefox.
   programs.firefox.enable = true;
+  programs.nushell.enable = true;
+  programs.zsh.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
