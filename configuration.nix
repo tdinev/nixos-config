@@ -108,6 +108,7 @@
   fzf
   jdk21_headless
   jujutsu
+  gccgo14
   ghostty
   git
   git-credential-oauth
