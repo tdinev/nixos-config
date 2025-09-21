@@ -1,14 +1,15 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -84,9 +85,9 @@
   users.users.tosho = {
     isNormalUser = true;
     description = "Todor Dinev";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -107,37 +108,38 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  bat
-  clojure
-  clojure-lsp
-  curl
-  docker
-  emacs
-  fastfetch
-  figlet
-  fzf
-  jdk21_headless
-  jujutsu
-  gccgo14
-  ghostty
-  git
-  git-credential-oauth
-  helix
-  httpie
-  lazygit
-  neovim
-  nodejs
-  nushell
-  ripgrep
-  rustlings
-  rustup
-  starship
-  telegram-desktop
-  tmux
-  tree
-  wezterm
-  zellij
-  zsh
+    alejandra
+    bat
+    clojure
+    clojure-lsp
+    curl
+    docker
+    emacs
+    fastfetch
+    figlet
+    fzf
+    jdk21_headless
+    jujutsu
+    gccgo14
+    ghostty
+    git
+    git-credential-oauth
+    helix
+    httpie
+    lazygit
+    neovim
+    nodejs
+    nushell
+    ripgrep
+    rustlings
+    rustup
+    starship
+    telegram-desktop
+    tmux
+    tree
+    wezterm
+    zellij
+    zsh
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -167,4 +169,9 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "25.05"; # Did you read the comment?
 
+  system.activationScripts.setBootDefault = {
+    text = ''
+      sed -i 's/^default .*/default windows.conf/' /boot/loader/loader.conf || true
+    '';
+  };
 }
