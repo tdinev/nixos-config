@@ -110,11 +110,13 @@
   environment.systemPackages = with pkgs; [
     alejandra
     bat
+    chromium
     clojure
     clojure-lsp
     curl
     docker
     emacs
+    emacsPackages.doom-themes
     fastfetch
     figlet
     fzf
